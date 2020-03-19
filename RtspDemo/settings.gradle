@@ -1,0 +1,3 @@
+include ':app', ':libvlc2'
+rootProject.name='RtspDemo'
+project(':libvlc2').projectDir = new File('libvlc')
