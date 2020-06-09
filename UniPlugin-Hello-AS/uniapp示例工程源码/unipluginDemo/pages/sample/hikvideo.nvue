@@ -1,0 +1,24 @@
+<template>
+	<div>
+		<button type="primary" @click="showToast">显示原生Toast</button>
+		<button type="primary" @click="invokeNoArgs">直接调用访问</button>
+	</div>
+</template>
+
+<script>
+	// 获取 module 
+	var hikvideo = uni.requireNativePlugin("hikvideo")
+	export default {
+		onLoad() {
+			
+		},
+		methods: {
+			showToast() {
+				hikvideo.showMyToast("测试")
+			},
+			invokeNoArgs(){
+				hikvideo.invoke()
+			}
+		}
+	}
+</script>

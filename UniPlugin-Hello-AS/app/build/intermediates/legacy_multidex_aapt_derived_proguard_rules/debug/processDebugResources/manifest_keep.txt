@@ -1,0 +1,4 @@
+# Referenced at D:\Demo\Android\UniPlugin-Hello-AS\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:39
+-keep class io.dcloud.application.DCloudApplication { <init>(...); }
+# Referenced at D:\Demo\Android\UniPlugin-Hello-AS\app\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:162
+-keep class io.dcloud.multiprocess.activity.WebAppActivity1 { <init>(...); }

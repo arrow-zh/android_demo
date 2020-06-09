@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/common_title_bg" >
+
+    <FrameLayout
+        android:id="@+id/fl_left"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"  >
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            
+            android:layout_gravity="center"
+            android:src="@drawable/btn_back" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/btn_title_selector" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:text="标题"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:id="@+id/fl_right"
+        android:layout_width="60dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_title_selector" />
+    </FrameLayout>
+
+</RelativeLayout>

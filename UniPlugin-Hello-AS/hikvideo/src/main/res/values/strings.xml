@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">SDK-8700</string>
+    <string name="main_url_hint">服务器地址(格式：10.33.31.200:443)</string>
+
+    <string name="main_user_name_hint">用户名</string>
+    <string name="main_psd_hint">密码</string>
+    <string name="main_login">登陆</string>
+    <string name="main_logout">退出</string>
+    <string name="main_direct_url">不登录进行预览</string>
+    <string name="main_record_play">录像文件播放</string>
+    <string name="empty_tip">参数不能为空</string>
+    <string name="have_not_login">没有登陆</string>
+    <string name="login_process_tip">登陆中&#8230;</string>
+    <string name="logout_process_tip">退出中&#8230;</string>
+    <string name="login_failed">登陆失败</string>
+    <string name="logout_failed">退出失败</string>
+    <string name="login_success">登陆成功</string>
+    <string name="logout_success">退出成功</string>
+
+    <string name="empty">数据为空</string>
+    <string name="loading_process_tip">加载中&#8230;</string>
+    <string name="loading_success">加载成功</string>
+    <string name="loading_failed">加载失败</string>
+    <string name="get_root_control_center_error">获取根节点出错</string>
+    <string name="get_sub_resource_list_error">获取次级资源列表出错</string>
+    <string name="no_permission">没有权限</string>
+    <string name="device_not_online">设备不在线</string>
+
+    <string name="loading_camera_info">加载监控详细信息</string>
+    <string name="loading_record_info">加载录像片段信息</string>
+    <string name="loading_camera_info_failure">加载监控点详细信息失败</string>
+    <string name="loading_device_info">加载设备信息</string>
+    <string name="loading_device_info_failure">加载设备信息失败</string>
+    <string name="loading_authority_token_failure">加载认证TOKEN失败</string>
+    <string name="loading_play_url">加载播放地址</string>
+    <string name="loading_play_url_failure">加载播放地址失败</string>
+    <string name="live_start_play">播放</string>
+    <string name="live_stop_play">停止</string>
+    <string name="live_capture">抓拍</string>
+    <string name="rtsp_success">启动取流成功</string>
+    <string name="rtsp_fail">启动取流失败</string>
+    <string name="live_stop_success">停止成功</string>
+    <string name="start_open_failed">开启播放库失败</string>
+    <string name="play_display_success">播放成功</string>
+    <string name="play_back_finish">录像播放结束</string>
+    <string name="start_ptz">开始云台控制</string>
+    <string name="stop_ptz">停止云台控制</string>
+    <string name="ptz_success">云台控制成功</string>
+    <string name="ptz_fail">云台控制失败</string>
+    <string name="start_record">启动录像</string>
+    <string name="stop_record">停止录像</string>
+    <string name="start_record_success">启动录像成功</string>
+    <string name="start_record_fail">启动录像失败</string>
+    <string name="stop_record_success">停止录像成功</string>
+    <string name="start_Audio">开启音频</string>
+    <string name="start_Talk">开启语音对讲</string>
+    <string name="start_Audio_success">开启音频成功</string>
+    <string name="start_Talk_success">开启语音对讲成功</string>
+    <string name="no_Talk_channels">该设备无可对讲通道</string>
+    <string name="select_channel">请选择通道号</string>
+    <string name="analog_channel">对讲通道%d</string>
+    <string name="start_Audio_fail">开启音频失败</string>
+    <string name="start_Talk_fail">开启语音对讲失败</string>
+    <string name="stop_Audio">关闭音频</string>
+    <string name="stop_Talk">关闭语音对讲</string>
+    <string name="capture_success">抓拍成功</string>
+    <string name="capture_fail">抓拍失败</string>
+    <string name="sd_card_fail">SD卡不可用</string>
+    <string name="sd_card_not_enough">SD卡空间不足</string>
+    <string name="preset_range">预置点范围为1~256，请重新设置</string>
+    <string name="set_preset">请设置预置点，范围为1~256</string>
+    <string-array name="camera_select_items">
+        <item>预览</item>
+        <item>回放</item>
+    </string-array>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+</resources>
