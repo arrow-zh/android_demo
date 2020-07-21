@@ -238,7 +238,6 @@
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
         <activity
             android:name="com.ev.hikvideo.activity.LiveActivity"
-            android:screenOrientation="landscape"
             android:theme="@style/ThemeNoTitleBar" />
         <activity
             android:name="com.ev.hikvideo.activity.PlayBackActivity"

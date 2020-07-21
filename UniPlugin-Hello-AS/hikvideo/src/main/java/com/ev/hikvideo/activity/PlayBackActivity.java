@@ -36,7 +36,9 @@ import com.hikvision.sdk.utils.SDKUtil;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -46,6 +48,7 @@ import android.view.SurfaceHolder;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -179,6 +182,7 @@ public class PlayBackActivity extends BaseActivity implements OnClickListener, S
 	private int PLAY_WINDOW_ONE = 1;
 
 	private String deviceId = ""; // 摄像头码
+	private JSONObject param = null; //传递数据
 
 	/**
 	 * 播放速度
@@ -279,24 +283,24 @@ public class PlayBackActivity extends BaseActivity implements OnClickListener, S
 	 *      construct-name: '',   //施工单位名称
 	 *      unit-type-str: '',    //分项名称
 	 *      device-name: '',      //设备名称
-	 *      bind-time: ''         //绑定时间
+	 *      bind-time: ''         //绑定时间 2019-01-12 12:12:12
 	 *      unbind-time: ''       //解绑时间
 	 *      }
-	 * @param options
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.play_back);
 
-		deviceId = getIntent().getStringExtra("deviceId");
+		param = JSON.parseObject(getIntent().getStringExtra("dataJson"));
+		deviceId = param.getString("device-id");
 
 		initView();
-		initData(null);
+		initData(param.getString("bind-time").split(" ")[0]);
 		initBackBtn();
 		setTitle("历史回放");
 
-		initSiteData(ToolUtils.getCurrentTime("yyyy-MM-dd"));
+		initSiteData();
 	}
 
 	// 初始化时间组件
@@ -514,16 +518,36 @@ public class PlayBackActivity extends BaseActivity implements OnClickListener, S
 		});
 	}
 
-	// 更新APP
-	private void initSiteData(String date) {
+	/**
+	 * 	 *      titlebar-color:'#333333', //状态栏颜色
+	 * 	 *      device-id: 'xxx',     //摄像头ID
+	 * 	 *      city-name: '',        //地市
+	 * 	 *      project-name: '',     //项目名称
+	 * 	 *      construct-name: '',   //施工单位名称
+	 * 	 *      unit-type-str: '',    //分项名称
+	 * 	 *      device-name: '',      //设备名称
+	 * 	 *      bind-time: ''         //绑定时间
+	 * 	 *      unbind-time: ''       //解绑时间
+	 */
+	private void initSiteData() {
+		String color = param.getString("titlebar-color");
+		if(color != null && !"".equals(color)) {
+			this.findViewById(R.id.rl_header).setBackgroundColor(Color.parseColor(color));
+		}
 
-		TextView mTvSiteName = (TextView) PlayBackActivity.this.findViewById(R.id.tv_site_name);
-		TextView mTvConstructName = (TextView) PlayBackActivity.this.findViewById(R.id.tv_construct_name);
-		TextView mTvStartTime = (TextView) PlayBackActivity.this.findViewById(R.id.tv_start_time);
+		TextView mTvSiteName = findViewById(R.id.tv_site_name);
+		TextView mTvConstructName = findViewById(R.id.tv_construct_name);
+		TextView mTvDeviceName = findViewById(R.id.tv_device_name);
+		TextView mTvUnitName = findViewById(R.id.tv_unit_name);
+		TextView mTvStartTime = findViewById(R.id.tv_start_time);
+		TextView mTvEndTime = findViewById(R.id.tv_end_time);
 
-		mTvSiteName.setText("站点名称：" );
-		mTvConstructName.setText("项目施工单位：" );
-		mTvStartTime.setText("项目开工时间：");
+		mTvSiteName.setText("项目名称：" + param.getString("project-name"));
+		mTvConstructName.setText("施工单位：" + param.getString("construct-name"));
+		mTvDeviceName.setText("设备名称：" + param.getString("device-name"));
+		mTvUnitName.setText("分项名称：" + param.getString("unit-type-str"));
+		mTvStartTime.setText("绑定时间：" + param.getString("bind-time"));
+		mTvEndTime.setText("解绑时间：" + param.getString("unbind-time"));
 	}
 
 	// 停止播放
@@ -723,21 +747,14 @@ public class PlayBackActivity extends BaseActivity implements OnClickListener, S
 				Toast.makeText(this, "非播放状态不能调节倍速！", Toast.LENGTH_SHORT).show();
 			}
 		} else if (id == R.id.btn_right) { // 筛选
-//			final WheelMain wheelMain = new WheelMain(this, false);
-//			new AlertDialog.Builder(this).setTitle("选择日期").setView(wheelMain.getView()).setPositiveButton("确定", new DialogInterface.OnClickListener() {
-//				@Override
-//				public void onClick(DialogInterface dialog, int which) {
-//					String date = wheelMain.getTime();
-//					stopPlay();
-//					initData(date);
-//
-//					initSiteData(date);
-//				}
-//			}).setNegativeButton("取消", new DialogInterface.OnClickListener() {
-//				@Override
-//				public void onClick(DialogInterface dialog, int which) {
-//				}
-//			}).show();
+			Calendar calendar=Calendar.getInstance();
+			new DatePickerDialog( this, new DatePickerDialog.OnDateSetListener() {
+				@Override
+				public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+					stopPlay();
+					initData(year + "-" + (month +1) +"-"+dayOfMonth);
+				}
+			},calendar.get(Calendar.YEAR) ,calendar.get(Calendar.MONTH) ,calendar.get(Calendar.DAY_OF_MONTH)).show();
 		}
 	}
 

@@ -14,7 +14,7 @@ MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\HP\.gradle\caches
 MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\HP\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\7fcecb1cde9d5a85215736750255aebb\AndroidManifest.xml:17:1-22:12
 MERGED from [:uniplugin_component] D:\Demo\Android\UniPlugin-Hello-AS\uniplugin_component\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-11:12
 MERGED from [:uniplugin_module] D:\Demo\Android\UniPlugin-Hello-AS\uniplugin_module\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-17:12
-MERGED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-23:12
+MERGED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-22:12
 MERGED from [com.facebook.fresco:fresco:1.13.0] C:\Users\HP\.gradle\caches\transforms-1\files-1.1\fresco-1.13.0.aar\b03125806af5f79c35e6f2a03cb823ad\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:animated-gif:1.13.0] C:\Users\HP\.gradle\caches\transforms-1\files-1.1\animated-gif-1.13.0.aar\31c996d4a9230dc77ff2d8446a3a3b70\AndroidManifest.xml:2:1-9:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HP\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\3cc915102fedbd6cbc4d5e61f06a5f23\AndroidManifest.xml:2:1-12:12
@@ -105,8 +105,8 @@ MERGED from [uniapp-release.aar] C:\Users\HP\.gradle\caches\transforms-1\files-1
 MERGED from [uniapp-release.aar] C:\Users\HP\.gradle\caches\transforms-1\files-1.1\uniapp-release.aar\d2088b7c34e687dc4c6955cefd42ebb2\AndroidManifest.xml:29:5-35:19
 MERGED from [:uniplugin_module] D:\Demo\Android\UniPlugin-Hello-AS\uniplugin_module\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:5-15:19
 MERGED from [:uniplugin_module] D:\Demo\Android\UniPlugin-Hello-AS\uniplugin_module\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:5-15:19
-MERGED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:5-21:19
-MERGED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:5-21:19
+MERGED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:5-20:19
+MERGED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:5-20:19
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HP\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\3cc915102fedbd6cbc4d5e61f06a5f23\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HP\.gradle\caches\transforms-1\files-1.1\glide-4.9.0.aar\3cc915102fedbd6cbc4d5e61f06a5f23\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HP\.gradle\caches\transforms-1\files-1.1\gifdecoder-4.9.0.aar\b33964bf79f80e66608b5e94dd55eaca\AndroidManifest.xml:9:5-20
@@ -512,16 +512,14 @@ ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\interme
 	android:name
 		ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:22-73
 activity#com.ev.hikvideo.activity.LiveActivity
-ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:9-17:54
-	android:screenOrientation
-		ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:13-50
+ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:9-16:54
 	android:theme
-		ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:13-51
+		ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:13-51
 	android:name
 		ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:13-65
 activity#com.ev.hikvideo.activity.PlayBackActivity
-ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:18:9-20:54
+ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:9-19:54
 	android:theme
-		ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20:13-51
+		ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:19:13-51
 	android:name
-		ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:19:13-69
+		ADDED from [:hikvideo] D:\Demo\Android\UniPlugin-Hello-AS\hikvideo\build\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:18:13-69

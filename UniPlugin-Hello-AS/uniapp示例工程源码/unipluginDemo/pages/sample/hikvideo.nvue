@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<button type="primary" @click="showToast">显示原生Toast</button>
-		<button type="primary" @click="invokeNoArgs">直接调用访问</button>
+		<button type="primary" @click="startLive">Live</button>
+		<button type="primary" @click="startPlayback">playback</button>
 	</div>
 </template>
 
@@ -13,11 +13,25 @@
 			
 		},
 		methods: {
-			showToast() {
-				hikvideo.showMyToast("测试")
+			startLive() {
+				hikvideo.startLive({
+					 "titlebar-color":"#FF0000", 
+					 "device-id": "72d1f36a8b0941b2abaee25376a8c5b5",
+					 "device-name": "TS_办公室",
+					 "project-name": "成都办公室铁塔项目",
+					 "construct-name": "成都施工单位",
+					 "unit-type-str": "塔身"})
 			},
-			invokeNoArgs(){
-				hikvideo.invoke()
+			startPlayback(){
+				hikvideo.startPlayback({
+					 "titlebar-color":"#FF0000", 
+					 "device-id": "72d1f36a8b0941b2abaee25376a8c5b5",
+					 "device-name": "TS_办公室",
+					 "project-name": "成都办公室铁塔项目",
+					 "construct-name": "成都施工单位",
+					 "unit-type-str": "塔身",
+					 "bind-time": "2020-06-19 18:12:12",
+					 "unbind-time": ""})
 			}
 		}
 	}

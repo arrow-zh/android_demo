@@ -92,7 +92,6 @@ public class VideoWXModule extends WXModule {
      * 参数 {
      *      titlebar-color:'#333333', //状态栏颜色
      *      device-id: 'xxx',     //摄像头ID
-     *      city-name: '',        //地市
      *      project-name: '',     //项目名称
      *      construct-name: '',   //施工单位名称
      *      unit-type-str: '',    //分项名称
@@ -104,7 +103,7 @@ public class VideoWXModule extends WXModule {
      */
     @JSMethod(uiThread = true)
     public void startPlayback(JSONObject options){
-        if(!options.containsKey("titlebar-color") || !options.containsKey("device-id") || !options.containsKey("city-name") || !options.containsKey("project-name") ||
+        if(!options.containsKey("titlebar-color") || !options.containsKey("device-id") || !options.containsKey("project-name") ||
                 !options.containsKey("construct-name") || !options.containsKey("unit-type-str") || !options.containsKey("device-name") || !options.containsKey("bind-time")
                 || !options.containsKey("unbind-time")) {
             UIUtils.showToast(mWXSDKInstance.getContext(), "参数不完善，请完善调用参数");
@@ -121,7 +120,6 @@ public class VideoWXModule extends WXModule {
     public void goToLive(JSONObject data){
         if (mWXSDKInstance != null && mWXSDKInstance.getContext() instanceof Activity) {
             Intent intent = new Intent(mWXSDKInstance.getContext(), LiveActivity.class);
-            intent.putExtra("deviceId", "72d1f36a8b0941b2abaee25376a8c5b5");
             intent.putExtra("dataJson", data.toJSONString());
             mWXSDKInstance.getContext().startActivity(intent);
         }
@@ -134,7 +132,6 @@ public class VideoWXModule extends WXModule {
     public void goToPlayBack(JSONObject data){
         if (mWXSDKInstance != null && mWXSDKInstance.getContext() instanceof Activity) {
             Intent intent = new Intent(mWXSDKInstance.getContext(), PlayBackActivity.class);
-            intent.putExtra("deviceId", "72d1f36a8b0941b2abaee25376a8c5b5");
             intent.putExtra("dataJson", data.toJSONString());
             mWXSDKInstance.getContext().startActivity(intent);
         }

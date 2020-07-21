@@ -18,6 +18,7 @@ import com.hikvision.sdk.utils.FileUtils;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -191,6 +192,7 @@ public class LiveActivity extends BaseActivity implements View.OnClickListener, 
 
     // 播放的是摄像头
     private String deviceId = "";
+    private JSONObject param = null;
 
     /**
      * 视图更新处理器
@@ -262,7 +264,8 @@ public class LiveActivity extends BaseActivity implements View.OnClickListener, 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live);
 
-        deviceId = getIntent().getStringExtra("deviceId");
+        param = JSON.parseObject(getIntent().getStringExtra("dataJson"));
+        deviceId = param.getString("device-id");
 
         initData();
         initView();
@@ -274,7 +277,20 @@ public class LiveActivity extends BaseActivity implements View.OnClickListener, 
 
     // 更新APP
     private void initSiteData() {
+        String color = param.getString("titlebar-color");
+        if(color != null && !"".equals(color)) {
+            this.findViewById(R.id.rl_header).setBackgroundColor(Color.parseColor(color));
+        }
 
+        TextView mTvSiteName = findViewById(R.id.tv_site_name);
+        TextView mTvConstructName = findViewById(R.id.tv_construct_name);
+        TextView mTvDeviceName = findViewById(R.id.tv_device_name);
+        TextView mTvUnitName = findViewById(R.id.tv_unit_name);
+
+        mTvSiteName.setText("项目名称：" + param.getString("project-name"));
+        mTvConstructName.setText("施工单位：" + param.getString("construct-name"));
+        mTvDeviceName.setText("设备名称：" + param.getString("device-name"));
+        mTvUnitName.setText("分项名称：" + param.getString("unit-type-str"));
     }
 
     /**
@@ -284,6 +300,8 @@ public class LiveActivity extends BaseActivity implements View.OnClickListener, 
         // mCamera = (SubResourceNodeBean)
         // getIntent().getSerializableExtra(Constants.IntentKey.CAMERA);
         mHandler = new MyHandler(this);
+
+
     }
 
     /**

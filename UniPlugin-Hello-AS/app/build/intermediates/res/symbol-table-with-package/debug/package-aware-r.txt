@@ -1062,6 +1062,7 @@ id right
 id rightLayout
 id right_icon
 id right_side
+id rl_header
 id rl_notification
 id rl_ptz_arrow
 id root
@@ -1136,7 +1137,8 @@ id tv_changing
 id tv_clarity
 id tv_construct_name
 id tv_current_time
-id tv_device_time
+id tv_device_name
+id tv_end_time
 id tv_focal
 id tv_hight
 id tv_low
@@ -1150,6 +1152,7 @@ id tv_start_time
 id tv_talk
 id tv_time
 id tv_title
+id tv_unit_name
 id tv_voice
 id uniform
 id up
