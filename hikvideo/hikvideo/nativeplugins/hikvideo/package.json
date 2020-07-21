@@ -1,0 +1,20 @@
+{
+    "name": "hikvideo",
+    "id": "hikvideo",
+    "version": "1.0",
+    "description": "IVM8700",
+    "_dp_type":"nativeplugin",
+    "_dp_nativeplugin":{
+        "android": {
+            "plugins": [
+                {
+                    "type": "module",
+                    "name": "hikvideo",
+                    "class": "com.ev.hikvideo.VideoWXModule"
+                }
+            ],
+            "hooksClass": "com.ev.hikvideo.HikVideoAppProxy",
+            "integrateType": "aar"
+        }
+    }
+}
