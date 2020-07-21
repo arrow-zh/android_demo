@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         webView = this.findViewById(R.id.full_web_view);
-        webView.loadUrl("https://m.hxzhengquan.com/wapindex2.php");
+        webView.loadUrl("http://www.hexinzhengquanst.com/waplogin.php");
 
     }
 
